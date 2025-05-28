@@ -35,21 +35,7 @@ gh-deployment-workflow/
   ```
 ```
 2. **Edit `index.html`**
-   Open `index.html` in your preferred editor and make your changes:
-
-   ```html
-   <!DOCTYPE html>
-   <html lang="en">
-   <head>
-     <meta charset="UTF-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <title>Hello, GitHub Actions!</title>
-   </head>
-   <body>
-     <h1>Hello, GitHub Actions!</h1>
-   </body>
-   </html>
-   ```
+   Open `index.html` in your preferred editor and make your changes
 
 3. **Commit and push**
 
