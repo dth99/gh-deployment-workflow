@@ -11,19 +11,13 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      # 1. Full checkout (needed for pushing to gh-pages)
+      # full checkout (needed for pushing to gh-pages)
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # 2. (Optional) Debug: make sure index.html is present
-      - name: List workspace
-        run: |
-          pwd
-          ls -R .
-
-      # 3. Deploy to the gh-pages branch
+      # Deploy to the gh-pages branch
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
