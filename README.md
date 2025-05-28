@@ -53,9 +53,9 @@ gh-deployment-workflow/
 * **Checkout**: pulls the repository into the runner.
 * **Deploy**: uses [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) to push the contents of the repo root (`./`) to the `gh-pages` branch, which GitHub Pages serves.
 
-![dth99](https://github.com/dth99/mini-devops-projects/blob/main/Nginx_log_Analyser/image.png)
+![dth99](https://github.com/dth99/gh-deployment-workflow/blob/main/image.png)
 
-
+![dth99](https://github.com/dth99/gh-deployment-workflow/blob/main/Screenshot%20From%202025-05-28%2020-02-50.png)
 
 ---
 
