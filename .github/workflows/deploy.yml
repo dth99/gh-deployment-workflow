@@ -1,6 +1,5 @@
 name: Deploy to GitHub Pages
 
-# Only run this workflow on pushes to main that change index.html
 on:
   push:
     branches:
@@ -12,16 +11,22 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      #  Check out your repository
+      # 1. Full checkout (needed for pushing to gh-pages)
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      #  Deploy to the gh-pages branch
+      # 2. (Optional) Debug: make sure index.html is present
+      - name: List workspace
+        run: |
+          pwd
+          ls -R .
+
+      # 3. Deploy to the gh-pages branch
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # The folder to publish; if you’re just publishing index.html at root:
           publish_dir: ./
-          # Ensure we push to gh-pages branch
           publish_branch: gh-pages
